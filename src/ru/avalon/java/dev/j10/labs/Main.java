@@ -8,7 +8,6 @@ import ru.avalon.java.dev.j10.labs.sort.*;
 
 
 public class Main {
-
     public static void main(String[] args) {
         int[] array = new int[20];
         System.out.println("**********Fibonacci**********");
@@ -31,8 +30,7 @@ public class Main {
         printR();
         RandomInitializer rnd = new RandomInitializer(number);
         rnd.initialize(array);
-        printArr(array);
-      
+        printArr(array);      
         System.out.println("**********BubbleSort**********");
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.sort(array);
@@ -41,8 +39,7 @@ public class Main {
         printR();
         RandomInitializer rnd1 = new RandomInitializer(number);
         rnd1.initialize (array);
-        printArr(array);
-        
+        printArr(array);        
         System.out.println("**********SelectionSort*********");      
         SelectionSort selectionSort = new SelectionSort();
         selectionSort.sort(array);
@@ -51,8 +48,7 @@ public class Main {
         printR();
         RandomInitializer rnd2 = new RandomInitializer(number);
         rnd2.initialize (array);
-        printArr(array);
-        
+        printArr(array);        
         System.out.println("**********ShellSort*********");      
         ShellSort shellSort = new ShellSort();
         shellSort.sort(array);
