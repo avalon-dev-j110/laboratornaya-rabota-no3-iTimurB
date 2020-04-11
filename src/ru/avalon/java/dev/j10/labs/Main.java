@@ -1,9 +1,85 @@
 package ru.avalon.java.dev.j10.labs;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import ru.avalon.java.dev.j10.labs.initialization.*;
+import ru.avalon.java.dev.j10.labs.sort.*;
+
+
 public class Main {
 
     public static void main(String[] args) {
-        int[] array;
+        int[] array = new int[20];
+        System.out.println("**********Fibonacci**********");
+        FibonacciInitializer fibonacci = new FibonacciInitializer ();
+        fibonacci.initialize(array);
+        printArr(array);
+        System.out.println("Summ array = " + summArray(array));
+        System.out.println(" ");
+        
+        // ввод числа
+        int number = 0;
+        System.out.println("Input number");
+        try {
+            number = (int) System.in.read();
+        }
+        catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }           
+               
+        printR();
+        RandomInitializer rnd = new RandomInitializer(number);
+        rnd.initialize(array);
+        printArr(array);
+      
+        System.out.println("**********BubbleSort**********");
+        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort.sort(array);
+        printArr(array);
+        
+        printR();
+        RandomInitializer rnd1 = new RandomInitializer(number);
+        rnd1.initialize (array);
+        printArr(array);
+        
+        System.out.println("**********SelectionSort*********");      
+        SelectionSort selectionSort = new SelectionSort();
+        selectionSort.sort(array);
+        printArr(array);
+         
+        printR();
+        RandomInitializer rnd2 = new RandomInitializer(number);
+        rnd2.initialize (array);
+        printArr(array);
+        
+        System.out.println("**********ShellSort*********");      
+        ShellSort shellSort = new ShellSort();
+        shellSort.sort(array);
+        printArr(array);                     
+    }
+    
+      private static int summArray (int [] array){
+          int summ = 0;
+          for (int j : array){
+              summ += j;              
+          }
+          return summ;
+      }
+      private static void printArr (int [] array){
+          for (int x : array) {
+            System.out.println(x);
+          }
+      }
+      private static void printR (){
+          System.out.println(" ");                    
+          System.out.println("**********InitializationArray**********");          
+      }
+}
+        
+        
+        
+        
 
 	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
@@ -33,6 +109,4 @@ public class Main {
          *
          * 8. Отсортировать массив с использованием
          *    сортировки Шелла.
-	     */
-    }
-}
+         */

@@ -17,4 +17,6 @@ public interface Sort {
      * @param array массив, подлежащий сортировке
      */
     void sort(int[] array);
+    
+    
 }
