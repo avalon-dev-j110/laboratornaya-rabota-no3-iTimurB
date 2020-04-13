@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
+import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Sort;
 
 public class ShellSort implements Sort {
@@ -21,7 +22,8 @@ public class ShellSort implements Sort {
                 if (arr[j - inc] > arr[j]){                    
                     tmp = arr[j];
                     arr[j] = arr[j-inc];
-                    arr[j-inc] = tmp;                    
+                    arr[j-inc] = tmp;    
+                  //System.out.println(Arrays.toString(arr));
                 }
                 else break;
             }

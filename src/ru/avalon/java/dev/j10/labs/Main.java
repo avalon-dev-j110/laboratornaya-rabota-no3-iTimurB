@@ -30,7 +30,8 @@ public class Main {
         printR();
         RandomInitializer rnd = new RandomInitializer(number);
         rnd.initialize(array);
-        printArr(array);      
+        printArr(array);    
+        System.out.println(" ");
         System.out.println("**********BubbleSort**********");
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.sort(array);
@@ -39,7 +40,8 @@ public class Main {
         printR();
         RandomInitializer rnd1 = new RandomInitializer(number);
         rnd1.initialize (array);
-        printArr(array);        
+        printArr(array);   
+        System.out.println(" ");
         System.out.println("**********SelectionSort*********");      
         SelectionSort selectionSort = new SelectionSort();
         selectionSort.sort(array);
@@ -48,7 +50,8 @@ public class Main {
         printR();
         RandomInitializer rnd2 = new RandomInitializer(number);
         rnd2.initialize (array);
-        printArr(array);        
+        printArr(array); 
+        System.out.println(" ");
         System.out.println("**********ShellSort*********");      
         ShellSort shellSort = new ShellSort();
         shellSort.sort(array);
@@ -63,8 +66,8 @@ public class Main {
           return summ;
       }
       private static void printArr (int [] array){
-          for (int x : array) {
-            System.out.println(x);
+          for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
           }
       }
       private static void printR (){
