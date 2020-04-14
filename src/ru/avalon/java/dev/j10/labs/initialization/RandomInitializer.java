@@ -2,28 +2,23 @@ package ru.avalon.java.dev.j10.labs.initialization;
 
 import ru.avalon.java.dev.j10.labs.Initializer;
 
-/**
- * Инициализатор, выполняющий инициализацию массива
- * значениями последовательности случайных чисел.
- *
- * <p>Экземпляры класса можно использовать многократно для
- * инициализации любого числа массивов.
- *
- * <p>Диапазон, в пределах которого будут получены случайные
- * значения, передаётся в конструктор класса при
- * инициализации.
- */
 public class RandomInitializer implements Initializer {
+private final
+ int number;
 
-    /**
-     * Выполняет инициализацию массива, значениями
-     * последовательности случайных чисел.
-     *
-     * @param array массив, подлежащий инициализации
-     */
+    public RandomInitializer (int number){
+        this.number = number;
+    }
+    
+    @Override
     public void initialize(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод initialize класса RandomInitializer
-         */
+        if (array.length == 0){
+            System.out.println("Array is empty");
+          return;  
+        } 
+        int i;
+        for (i = 0; i < array.length; i++){
+            array[i]= (int) ((Math.random() * (number+number))- number);
+        }        
     }
 }

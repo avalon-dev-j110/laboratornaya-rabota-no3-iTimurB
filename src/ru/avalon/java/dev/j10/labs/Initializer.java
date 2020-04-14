@@ -18,4 +18,6 @@ public interface Initializer {
      * @param array массив, подлежащий инициализации
      */
     void initialize(int[] array);
+    
+    
 }
