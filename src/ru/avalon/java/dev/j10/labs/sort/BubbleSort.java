@@ -4,6 +4,7 @@ import ru.avalon.java.dev.j10.labs.Sort;
 public class BubbleSort implements Sort {
     @Override
     public void sort(int[] array) {
+        //TODO: Переменную можно объявлять внутри цикла.
         int temp;
         int count = 0;
         for (int i = 0; i < array.length; i++) {
