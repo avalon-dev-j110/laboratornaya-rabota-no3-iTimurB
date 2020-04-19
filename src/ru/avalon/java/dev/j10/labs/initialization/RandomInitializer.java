@@ -15,10 +15,12 @@ private final
         if (array.length == 0){
             System.out.println("Array is empty");
           return;  
-        } 
-        int i;
-        for (i = 0; i < array.length; i++){
+        }
+        //TODO: Не надо объявлять переменную до цикла.
+        //TODO: Эта переменная будет видна за пределами цикла, хотя она там абсолютно не нужна.
+        //int i;
+        for (int i = 0; i < array.length; i++){
             array[i]= (int) ((Math.random() * (number+number))- number);
-        }        
+        }
     }
 }
