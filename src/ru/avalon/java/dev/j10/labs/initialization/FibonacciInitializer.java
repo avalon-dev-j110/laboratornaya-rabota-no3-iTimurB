@@ -5,7 +5,7 @@ import ru.avalon.java.dev.j10.labs.Initializer;
 public class FibonacciInitializer implements Initializer {    
     @Override
     public void initialize(int[] array) {
-        if (array.length == 0 && array.length == 1){
+        if (array.length == 0 || array.length == 1){
             System.out.println("Array is empty");
           return;  
         }
