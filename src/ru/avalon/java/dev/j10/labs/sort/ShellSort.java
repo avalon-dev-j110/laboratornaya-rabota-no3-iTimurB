@@ -1,6 +1,6 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Sort;
 
 public class ShellSort implements Sort {
